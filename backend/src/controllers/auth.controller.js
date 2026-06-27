@@ -112,3 +112,53 @@ export async function logout(req, res) {
     }
 
 }
+
+export async function board(req, res) {
+    try {
+        const userId = req.user._id;
+
+        const { fullName, bio, nativeLanguage, learningLanguage, location } = req.body;
+
+        if (!fullName || !bio || !nativeLanguage || !learningLanguage || !location) {
+            return res.status(400).json({
+                message: "All fields are required",
+                missingFields: [
+                    !fullName && "fullName",
+                    !bio && "bio",
+                    !nativeLanguage && "nativeLanguage",
+                    !learningLanguage && "learningLanguage",
+                    !location && "location",
+                ].filter(Boolean),
+            });
+        }
+
+        const updateUser = await User.findOneAndUpdate(userId, {
+            ...req.body,
+            isOnboarded: true
+        }, { new: true })
+
+        if (!updateUser) return res.status(404).json({ message: "User not found" })
+
+            
+        try {
+            await upsertStreamUser({
+                id: updatedUser._id.toString(),
+                name: updatedUser.fullName,
+                image: updatedUser.profilePic || "",
+            });
+            console.log(`Stream user updated after onboarding for ${updatedUser.fullName}`);
+        } catch (streamError) {
+            console.log("Error updating Stream user during onboarding:", streamError.message);
+        }
+
+        
+        res.status(200).json({ succes: "true", user: updateUser })
+
+
+    } catch (error) {
+
+        console.log(`Onboarding Error:${error}`);
+        res.status(500).json({ message: "Internal Server Error auth.controller.js" });
+
+    }
+}
