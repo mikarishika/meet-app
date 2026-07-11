@@ -16,6 +16,7 @@ import {
 import { StreamChat } from "stream-chat";
 import toast from "react-hot-toast";
 import "stream-chat-react/dist/css/v2/index.css";
+import "./styles/stream-chat-theme.css"; 
 
 import ChatLoader from "../components/ChatLoader.jsx";
 import CallButton from "../components/CallButton.jsx";
@@ -34,7 +35,7 @@ const ChatPage = () => {
   const { data: tokenData } = useQuery({
     queryKey: ["streamToken"],
     queryFn: getStreamToken,
-    enabled: !!authUser, // this will run only when authUser is available
+    enabled: !!authUser, 
   });
 
   useEffect(() => {
@@ -55,12 +56,7 @@ const ChatPage = () => {
           tokenData.token
         );
 
-        //
         const channelId = [authUser._id, targetUserId].sort().join("-");
-
-        // you and me
-        // if i start the chat => channelId: [myId, yourId]
-        // if you start the chat => channelId: [yourId, myId]  => [myId,yourId]
 
         const currChannel = client.channel("messaging", channelId, {
           members: [authUser._id, targetUserId],
@@ -96,10 +92,10 @@ const ChatPage = () => {
   if (loading || !chatClient || !channel) return <ChatLoader />;
 
   return (
-    <div className="h-[93vh]">
-      <Chat client={chatClient}>
+    <div className="h-[93vh] bg-base-200">
+      <Chat client={chatClient} >
         <Channel channel={channel}>
-          <div className="w-full relative">
+          <div className="flex-1 w-full relative min-w-0 ">
             <CallButton handleVideoCall={handleVideoCall} />
             <Window>
               <ChannelHeader />

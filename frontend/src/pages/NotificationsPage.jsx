@@ -19,7 +19,6 @@ const NotificationsPage = () => {
     },
   });
 
-  // Guard against requests whose sender/recipient was deleted or failed to populate
   const incomingRequests = (friendRequests?.incomingReqs || []).filter(
     (request) => request?.sender
   );

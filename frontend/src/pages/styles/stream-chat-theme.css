@@ -1,0 +1,25 @@
+.str-chat,
+.str-chat__channel,
+.str-chat__main-panel,
+.str-chat__list,
+.str-chat__message-list-scroll,
+.str-chat__thread,
+.str-chat__thread-list,
+.str-chat__container,
+.str-chat__header-livestream,
+.str-chat__channel-header,
+.str-chat__message-input,
+.str-chat__message-input-inner,
+.str-chat__message-textarea-container,
+.str-chat__message-textarea,
+.str-chat__message-input-container,
+.str-chat-react__message-input,
+.str-chat__file-upload-container {
+  background-color: transparent !important;
+}
+
+.str-chat__channel-header,
+.str-chat__header-livestream,
+.str-chat__message-textarea-container textarea {
+  color: inherit !important;
+}

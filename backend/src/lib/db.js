@@ -11,7 +11,6 @@ export const connectDB = async () => {
         console.log("DB_URL:", ENV.DB_URL);
     } catch (error) {
         console.error('❌Error while connecting to MongoDB', error)
-        // process.exit(1); // 0 means succes , 1 mean failure
         setTimeout(() => {connectDB();}, 1000);
     }
 }

@@ -42,7 +42,6 @@ const HomePage = () => {
     const outgoingIds = new Set();
     if (outgoingFriendReqs && outgoingFriendReqs.length > 0) {
       outgoingFriendReqs.forEach((req) => {
-        // Guard against requests whose recipient was deleted / failed to populate
         if (req?.recipient?._id) {
           outgoingIds.add(req.recipient._id);
         }
