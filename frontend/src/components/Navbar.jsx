@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router";
 import useAuthUser from "../hooks/useAuthUser.js";
-import { BellIcon, LogOutIcon, ShipWheelIcon } from "lucide-react";
+import { BellIcon, LogOutIcon, SettingsIcon, ShipWheelIcon } from "lucide-react";
 import ThemeSelector from "./ThemeSelector.jsx";
 import useLogout from "../hooks/useLogout.js";
 
@@ -35,7 +35,13 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* TODO */}
+          {/* SETTINGS - برگشت به صفحه ویرایش پروفایل */}
+          <Link to={"/edit-profile"}>
+            <button className="btn btn-ghost btn-circle" title="ویرایش پروفایل">
+              <SettingsIcon className="h-6 w-6 text-base-content opacity-70" />
+            </button>
+          </Link>
+
           <ThemeSelector />
           <div className="avatar">
             <div className="w-9 rounded-full">

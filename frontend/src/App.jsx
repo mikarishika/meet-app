@@ -7,6 +7,7 @@ import NotificationsPage from "./pages/NotificationsPage.jsx";
 import CallPage from "./pages/CallPage.jsx";
 import ChatPage from "./pages/ChatPage.jsx";
 import OnboardingPage from "./pages/OnboardingPage.jsx";
+import EditProfilePage from "./pages/EditProfilePage.jsx";
 
 import { Toaster } from "react-hot-toast";
 
@@ -99,6 +100,13 @@ const App = () => {
             ) : (
               <Navigate to="/login" />
             )
+          }
+        />
+
+        <Route
+          path="/edit-profile"
+          element={
+            isAuthenticated ? <EditProfilePage /> : <Navigate to="/login" />
           }
         />
       </Routes>

@@ -27,8 +27,9 @@ export async function signup(req, res) {
             return res.status(400).json({ message: "Email already exists, please use a different one" });
         }
 
-        const idx = Math.floor(Math.random() * 100) + 1;
-        const randomAvatar = `https://avatarapi.runflare.run/public/${idx}.png`;
+        // const idx = Math.floor(Math.random() * 100) + 1;
+        // const randomAvatar = `https://avatarapi.runflare.run/public/${idx}.png`;
+        const randomAvatar = `https://avatarapi.runflare.run/public/boy?username=${email}`;
 
         const newUser = await User.create({
             email,
@@ -119,39 +120,38 @@ export async function board(req, res) {
 
         const { fullName, bio, nativeLanguage, learningLanguage, location } = req.body;
 
-        if (!fullName || !bio || !nativeLanguage || !learningLanguage || !location) {
+        // فقط این سه‌تا اجباری هستن؛ bio و location اختیاری شدن
+        if (!fullName || !nativeLanguage || !learningLanguage) {
             return res.status(400).json({
-                message: "All fields are required",
+                message: "Full name and languages are required",
                 missingFields: [
                     !fullName && "fullName",
-                    !bio && "bio",
                     !nativeLanguage && "nativeLanguage",
                     !learningLanguage && "learningLanguage",
-                    !location && "location",
                 ].filter(Boolean),
             });
         }
 
-        const updateUser = await User.findOneAndUpdate(userId, {
+        const updateUser = await User.findByIdAndUpdate(userId, {
             ...req.body,
             isOnboarded: true
         }, { new: true })
 
         if (!updateUser) return res.status(404).json({ message: "User not found" })
 
-            
+
         try {
             await upsertStreamUser({
-                id: updatedUser._id.toString(),
-                name: updatedUser.fullName,
-                image: updatedUser.profilePic || "",
+                id: updateUser._id.toString(),
+                name: updateUser.fullName,
+                image: updateUser.profilePic || "",
             });
-            console.log(`Stream user updated after onboarding for ${updatedUser.fullName}`);
+            console.log(`Stream user updated after onboarding for ${updateUser.fullName}`);
         } catch (streamError) {
             console.log("Error updating Stream user during onboarding:", streamError.message);
         }
 
-        
+
         res.status(200).json({ succes: "true", user: updateUser })
 
 
