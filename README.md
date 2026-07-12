@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/29925228/README.md)
+[Uploading README (1).md…]()
 <div align="center">
 
 # 🌐 Streamify
@@ -28,6 +28,23 @@ Connect with people around the world, practice a new language, and make friends 
 - 🎨 **32+ live themes** — switch the entire app's look instantly with a built-in theme selector (powered by daisyUI), preference saved across sessions
 - 🔔 **Notifications** — see incoming and accepted friend requests in one place
 - 📱 **Fully responsive UI** — clean, modern interface built with Tailwind CSS + daisyUI, works on desktop and mobile
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+### Homepage — Recommended Learners
+<img src="./docs/screenshots/homepage.png" alt="Homepage with recommended language partners" width="800"/>
+
+### Your Friends List
+<img src="./docs/screenshots/friends-list.png" alt="Friends list page" width="800"/>
+
+### Notifications — Incoming Friend Requests
+<img src="./docs/screenshots/notifications.png" alt="Notifications page with friend requests" width="800"/>
+
+</div>
 
 ---
 
