@@ -36,13 +36,13 @@ Connect with people around the world, practice a new language, and make friends 
 <div align="center">
 
 ### Homepage — Recommended Learners
-<img src="./docs/screenshots/homepage.png" alt="Homepage with recommended language partners" width="800"/>
+<img src="./docs/screenshots/homepage.png" alt="Homepage with recommended language partners" width="400"/>
 
 ### Your Friends List
-<img src="./docs/screenshots/friends-list.png" alt="Friends list page" width="800"/>
+<img src="./docs/screenshots/friends-list.png" alt="Friends list page" width="400"/>
 
 ### Notifications — Incoming Friend Requests
-<img src="./docs/screenshots/notifications.png" alt="Notifications page with friend requests" width="800"/>
+<img src="./docs/screenshots/notifications.png" alt="Notifications page with friend requests" width="400"/>
 
 </div>
 
