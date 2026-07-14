@@ -30,6 +30,8 @@ Connect with people around the world, practice a new language, and make friends 
 - 📱 **Fully responsive UI** — clean, modern interface built with Tailwind CSS + daisyUI, works on desktop and mobile
 
 ---
+## Live Demo
+https://github.com/user-attachments/assets/3a173005-4ed0-4435-aad1-6fe6eb442e6e
 
 ## 📸 Screenshots
 
