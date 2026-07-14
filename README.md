@@ -45,13 +45,17 @@ Connect with people around the world, practice a new language, and make friends 
 <img src="./docs/screenshots/notifications.png" alt="Notifications page with friend requests" width="700"/>
 
 ### Chat Page — Chat whit your friends
-<img src="./docs/screenshots/chatpage.png" alt="Notifications page with friend requests" width="700"/>
+<img src="./docs/screenshots/chatpage.png"  width="700"/>
+
+### VideoCall Page — Call whit your friends
+<img src="./docs/screenshots/videocallpage.png" width="700"/>
+
 
 ### Login Page
-<img src="./docs/screenshots/loginpage.png" alt="Notifications page with friend requests" width="700"/>
+<img src="./docs/screenshots/loginpage.png"  width="700"/>
 
 ### Signup Page
-<img src="./docs/screenshots/signuppage.png" alt="Notifications page with friend requests" width="700"/>
+<img src="./docs/screenshots/signuppage.png"  width="700"/>
 
 
 </div>
