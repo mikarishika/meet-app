@@ -35,33 +35,43 @@ https://github.com/user-attachments/assets/3a173005-4ed0-4435-aad1-6fe6eb442e6e
 
 ## 📸 Screenshots
 
-<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="./docs/screenshots/homepage.png" width="300"/>
+      <br>
+      <b>Homepage</b>
+    </td>
+    <td align="center">
+      <img src="./docs/screenshots/friends-list.png" width="300"/>
+      <br>
+      <b>Friends List</b>
+    </td>
+    <td align="center">
+      <img src="./docs/screenshots/notifications.png" width="300"/>
+      <br>
+      <b>Notifications</b>
+    </td>
+  </tr>
 
-### Homepage — Recommended Learners
-<img src="./docs/screenshots/homepage.png" alt="Homepage with recommended language partners" width="700"/>
-
-### Your Friends List
-<img src="./docs/screenshots/friends-list.png" alt="Friends list page" width="700"/>
-
-### Notifications — Incoming Friend Requests
-<img src="./docs/screenshots/notifications.png" alt="Notifications page with friend requests" width="700"/>
-
-### Chat Page — Chat whit your friends
-<img src="./docs/screenshots/chatpage.png"  width="700"/>
-
-### VideoCall Page — Call whit your friends
-<img src="./docs/screenshots/videocallpage.png" width="700"/>
-
-
-### Login Page
-<img src="./docs/screenshots/loginpage.png"  width="700"/>
-
-### Signup Page
-<img src="./docs/screenshots/signuppage.png"  width="700"/>
-
-
-</div>
-
+  <tr>
+    <td align="center">
+      <img src="./docs/screenshots/chatpage.png" width="300"/>
+      <br>
+      <b>Chat Page</b>
+    </td>
+    <td align="center">
+      <img src="./docs/screenshots/videocallpage.png" width="300"/>
+      <br>
+      <b>Video Call</b>
+    </td>
+    <td align="center">
+      <img src="./docs/screenshots/loginpage.png" width="300"/>
+      <br>
+      <b>Login Page</b>
+    </td>
+  </tr>
+</table>
 ---
 
 ## 🛠️ Tech Stack
