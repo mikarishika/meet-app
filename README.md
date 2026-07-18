@@ -75,7 +75,7 @@ https://github.com/user-attachments/assets/3a173005-4ed0-4435-aad1-6fe6eb442e6e
     </td>
   </tr>
 </table>
----
+----
 
 ## 🛠️ Tech Stack
 
