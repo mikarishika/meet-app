@@ -31,6 +31,9 @@ Connect with people around the world, practice a new language, and make friends 
 
 ---
 ## Live Demo
+https://meet-app-et8n.vercel.app/
+
+## video Demo
 https://github.com/user-attachments/assets/3a173005-4ed0-4435-aad1-6fe6eb442e6e
 
 ## 📸 Screenshots
