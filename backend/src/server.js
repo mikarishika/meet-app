@@ -17,7 +17,10 @@ const PORT = ENV.PORT
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",
+    "https://meet-app-et8n.vercel.app"
+  ],
   credentials: true
 }));
 
