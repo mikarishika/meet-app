@@ -30,7 +30,9 @@ Connect with people around the world, practice a new language, and make friends 
 - 📱 **Fully responsive UI** — clean, modern interface built with Tailwind CSS + daisyUI, works on desktop and mobile
 
 ---
-## Live Demo
+## Live Demo 
+
+Please turn on your VPN and then click 👉
 https://meet-app-et8n.vercel.app/
 
 ## video Demo
